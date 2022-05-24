@@ -1,0 +1,65 @@
+package ex4;
+import java.util.Scanner;
+public class eleicoes {
+	public static void main(String[] args) {
+	Scanner ler = new Scanner(System.in);
+	int numEleitor = 0;
+	int PT=0, PDT=0, PL=0, PSDB=0, nulo=0, branco=0;
+	//declarando os partidos e os eleitores;
+		  
+	for(int i = 0; i < 50; i++)  {
+		numEleitor++;
+		// declarando que a cada um eleitor votado ele muda para outro eleitor;
+		System.out.println("\nEleitor " + numEleitor +", digite o numero do candidato a sua escolha.");
+		System.out.print("Digite '13' para PT, '12' para PDT, '22' para PL, '45' para PSDB, '0' para voto Nulo, ou digite '9' para voto em branco!\nSua escolha e: ");
+		int numero = ler.nextInt();
+		//recebendo os votos;
+
+		switch (numero){
+		//lendo os votos para cada partido;
+		     case 13:
+		       System.out.println("Voce votou no Candito do partido PT!");
+		       PT++;
+		       break;
+		       // voto para o PT;
+		      
+		     case 12:
+		       System.out.println("Voce votou no Candito do partido PDT!");
+		       PDT++;
+		       break;
+		       //voto para o PDT;
+		     case 22:
+		       System.out.println("Voce votou no Candito do partido PL!");
+		       PL++;
+		       break;
+		       //voto para o PL;
+		     case 45:
+		       System.out.println("Voce votou no Candito do partido PSDB!");
+		       PSDB++;
+		       break;
+		       //voto para o PSDB;
+		      
+		     case 0:
+		       System.out.println("Voce optou pelo voto Nulo!");
+		       nulo++;
+		       break;
+		       // voto nulo;
+		     case 9:
+		       System.out.println("Voce optou por votar em Branco!");
+		       branco++;
+		       break;
+		       // voto em branco;
+		     default:
+		       System.out.println("Voto invalido! Seu voto nao sera considerado na contagem final!"); 
+//		       qualquer outro numero nao ira contar na soma dos votos e ira aparecer essa mensagem;
+		    }
+		  }
+		    System.out.printf("\nO total de votos para o PT foi igual a: " + PT + "!");
+		    System.out.printf("\nO total de votos para o PDT foi igual a: " + PDT + "!");
+		    System.out.printf("\nO total de votos para o PL foi igual a: " + PL + "!");
+		    System.out.printf("\nO total de votos para o PSDB foi igual a: " + PSDB + "!");
+		    System.out.printf("\nO total de votos nulos foi igual a: " + nulo + "!");
+		    System.out.printf("\nO total de votos em branco foi igual a: " + branco + "!"); 
+		    // declaraçao das somatoria dos votos de cada partido;
+	}
+}
